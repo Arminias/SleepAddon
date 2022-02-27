@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "sleepaddon",
+  "version": "${version}",
+
+  "name": "Sleep Addon",
+  "description": "This addon re-enables sleeping by simulating the world.",
+  "authors": [
+    "Arminias"
+  ],
+  "contact": {
+    "sources": "https://github.com/Arminias/SleepAddon-BTW-Fabric"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "sleepaddon/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "init": [
+      "net.fabricmc.arminias.sleepaddon.SleepMod"
+    ]
+  },
+  "mixins": [
+    "sleepaddon.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

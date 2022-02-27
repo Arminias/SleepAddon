@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.fabricmc.arminias.sleepaddon.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "EntityPlayerMixin",
+    "FCBlockBedMixin",
+    "WorldServerMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
