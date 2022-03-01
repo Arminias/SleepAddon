@@ -1,12 +1,18 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import net.fabricmc.loom.task.RemapJarTask
 
+buildscript {
+    dependencies {
+        classpath fileTree(dir: "libs", include: "fabric-loom-0.7.local.jar")
+    }
+}
+
 plugins {
     id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'fabric-loom' version "0.7-SNAPSHOT"
-}
 
+}
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
@@ -72,6 +78,10 @@ configurations.all {
         }
         force "org.lwjgl.lwjgl:lwjgl-platform:${lwjglVersion}"
     }
+}
+
+loom {
+    refmapName = 'mixins.sleepaddon.refmap.json'
 }
 
 processResources {
