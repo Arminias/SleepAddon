@@ -6,6 +6,9 @@
   "mixins": [
     "EntityPlayerMixin",
     "FCBlockBedMixin",
+    "GuiSleepMPMixin",
+    "MinecraftAccessor",
+    "MinecraftServerMixin",
     "WorldServerMixin"
   ],
   "client": [
