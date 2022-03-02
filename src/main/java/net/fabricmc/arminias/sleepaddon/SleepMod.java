@@ -1,13 +1,15 @@
 package net.fabricmc.arminias.sleepaddon;
 
-import com.prupe.mcpatcher.MCLogger;
 import net.fabricmc.api.ModInitializer;
 
 public class SleepMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final MCLogger LOGGER = MCLogger.getLogger("sleepaddon");
+
+	// NOT NEEDED IN THIS MOD RIGHT NOW!
+	// Commented out for better compatibility with older BTW releases (those without MCPatcher included)
+	//public static final MCLogger LOGGER = MCLogger.getLogger("sleepaddon");
 
 	@Override
 	public void onInitialize() {
